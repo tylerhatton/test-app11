@@ -33,9 +33,9 @@ jobs:
           context: './app/src'
           file: ./app/Dockerfile
           tags: |
-            ${{secrets.REGISTRY_URL}}/images/test-app26:latest
+            ${{secrets.REGISTRY_URL}}/images/test-app11:latest
           labels: |
-            org.opencontainers.image.description=test-app26 Docker image
+            org.opencontainers.image.description=test-app11 Docker image
       - name: Scan for vulnerabilities
         id: scan
         uses: crazy-max/ghaction-container-scan@v2
@@ -50,6 +50,6 @@ jobs:
           file: ./app/Dockerfile
           push: true
           tags: |
-            ${{secrets.REGISTRY_URL}}/images/test-app26:latest
+            ${{secrets.REGISTRY_URL}}/images/test-app11:latest
           labels: |
-            org.opencontainers.image.description=test-app26 Docker image
+            org.opencontainers.image.description=test-app11 Docker image
